@@ -1,9 +1,10 @@
 const express = require("express")
+const cams = require("./cams.json")
 const router = express.Router()
 
-router.get("/", (req, res) => {
+router.get("/camlist", (req, res) => {
   res.send({
-    resp: "this is sample response",
+    cams: cams,
   })
 })
 
